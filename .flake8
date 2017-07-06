@@ -1,0 +1,12 @@
+[flake8]
+max-line-length = 99
+
+exclude =
+    env,
+    .cache,
+    .mypy_cache
+
+# E221 multiple spaces before operator (used for visual align)
+# F811 redefinition of ... (used for @overload)
+# E203 whitespace before ':' (used for visual align)
+ignore = E203,E221,F811

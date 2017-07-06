@@ -1,0 +1,8 @@
+env/
+.cache
+.hypothesis
+.mypy_cache
+*.egg-info
+dist/
+__pycache__/
+.#*
