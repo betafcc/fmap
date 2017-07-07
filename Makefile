@@ -9,11 +9,12 @@ PIP     := $(ENV_BIN)/pip
 PY      := $(ENV_BIN)/python
 
 
+all: dev
+
 .PHONY: dev
 
 dev: init
 	make watch TASK=validate
-
 
 init: $(ENV)
 
