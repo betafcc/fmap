@@ -10,7 +10,10 @@ Install
     python3 setup.py install
 
 
-#### In python 2:
+What?
+-----
+
+##### In Python 2:
 ```py
 > range(1, 11)
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  # bad
@@ -25,7 +28,7 @@ Install
 ...  # End of the universe, really bad
 ```
 
-#### In Python 3:
+##### In Python 3:
 ```py
 > range(1, 11)
 range(1, 11)  # good
@@ -40,7 +43,7 @@ range(6, 7)  # really good
 TypeError: 'map' object is not subscriptable  # bad
 ```
 
-#### with fmap:
+##### with fmap:
 ```py
 > from fmap import fmap
 > fmap(fib, range(1, 101))
@@ -53,7 +56,7 @@ fmap(fib, range(21, 81))  # really good
 1346269  # awesome
 ```
 
-#### also:
+##### also:
 ```py
 > def sq(x): return x*x
 > fmap(sq, fmap(fib, range(1, 101)))
