@@ -32,6 +32,6 @@ def fmap(f, it):  # type: ignore
             return SequenceFunctor(it).fmap(f)
 
         elif isinstance(it, Iterable):
-            return IterableFunctor(it).map(f)
+            return IterableFunctor(it).fmap(f)
 
         raise TypeError(f"Can't fmap type {type(it)}")
