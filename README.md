@@ -5,15 +5,13 @@ Lazy map for Iterable and Sequence
 Install
 -------
 
-    git clone https://github.com/betafcc/fmap.git
-    cd fmap
-    python3 setup.py install
-
+    pip install git+https://github.com/betafcc/fmap.git
 
 What?
 -----
 
-##### In Python 2:
+##### In Python 2
+Only eager evaluation:
 ```py
 > range(1, 11)
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  # bad
@@ -28,7 +26,8 @@ What?
 ...  # End of the universe, really bad
 ```
 
-##### In Python 3:
+##### In Python 3
+Lazy evaluation, but losing the interface:
 ```py
 > range(1, 11)
 range(1, 11)  # good
@@ -43,7 +42,8 @@ range(6, 7)  # really good
 TypeError: 'map' object is not subscriptable  # bad
 ```
 
-##### with fmap:
+##### With fmap
+Lazy evaluation, preserving the interface:
 ```py
 > from fmap import fmap
 > fmap(fib, range(1, 101))
@@ -56,7 +56,8 @@ fmap(fib, range(21, 81))  # really good
 1346269  # awesome
 ```
 
-##### also:
+##### Also
+Convenience for composition, fusing the functions:
 ```py
 > def sq(x): return x*x
 > fmap(sq, fmap(fib, range(1, 101)))
